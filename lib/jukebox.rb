@@ -45,5 +45,23 @@ end
 def run(songs)
   help
 
-  
+  input = ""
+  while input   #if and while an input is put in and not when there is no input
+    puts "Please enter a command:"
+    input = gets.downcase.strip
+    case input
+    when 'list'
+      list(songs)
+    when 'play'
+      list(songs)
+      play(songs)
+    when 'help'
+      help
+    when 'exit'
+      exit_jukebox
+      break
+    else
+      help
+    end
+  end
 end
